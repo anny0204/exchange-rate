@@ -1,0 +1,80 @@
+@import '../../sass/variables'
+
+.rate
+    width: 25%    
+    padding: 10px
+    .rate-container
+        border: 2px solid $border-color
+        background: #f0f0f1
+        h1
+            color: $primary-white
+            background: #616162
+            text-transform: uppercase
+            text-align: center
+            margin: 0
+        .rate-body
+            padding: 10px 16px 60px
+            display: flex
+            justify-content: space-between
+            .currency-container
+                background: $primary-white
+                height: 66px
+                div
+                    font-weight: $title-font-weight
+                &.currency-sell
+                    color: $primary-red
+                    padding: 2px 15px 2px 5px 
+                    position: relative
+                    border-radius: 3px
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 14px
+                        right: -50px
+                        width: 14px
+                        border-style: solid
+                        border-color: $primary-white transparent
+                        border-width: 0 27px 36px
+                        transform: rotate(90deg)
+                        border-radius: 3px
+                &.currency-buy
+                    color: $primary-green
+                    padding: 2px 5px 2px 15px
+                    border-left: none
+                    text-align: right
+                    position: relative
+                    &:before
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 14px
+                        left: -50px
+                        width: 14px
+                        border-style: solid
+                        border-color: $primary-white transparent
+                        border-width: 0 27px 36px
+                        transform: rotate(-90deg)
+                        border-radius: 3px 
+                .currency-value
+                    margin-top: 5px
+                    div
+                        display: inline-block
+                        font-size: 24px
+                        &:nth-of-type(4), &:nth-of-type(5)
+                            font-size: 2em
+                        &:nth-of-type(6)
+                            position: relative
+                            top: -12px
+            .arrow
+                width: 0
+                height: 0
+                z-index: 1
+                &.arrow-red
+                    border-top: 28px solid #f85f60
+                    border-right: 7px solid transparent
+                    border-left: 7px solid transparent
+                &.arrow-green
+                    border-bottom: 28px solid #1a8e1a
+                    border-right: 7px solid transparent
+                    border-left: 7px solid transparent

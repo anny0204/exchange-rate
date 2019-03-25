@@ -14,8 +14,8 @@ exports.rates_get_all = (req, res, next) => {
           return {
             _id: doc._id,
             pair: doc.pair,
-            buy: Math.round((doc.buy + doc.buy * deltaBuy) * 1000) / 1000,
-            sell: Math.round((doc.sell + doc.sell * deltaSell) * 1000) / 1000
+            buy: Math.round((doc.buy + doc.buy * deltaBuy) * 100000) / 100000,
+            sell: Math.round((doc.sell + doc.sell * deltaSell) * 100000) / 100000
           }
         })
       }
