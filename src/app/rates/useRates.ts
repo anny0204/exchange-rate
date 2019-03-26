@@ -17,7 +17,6 @@ export const useRates = (url: string, dependencies: any) => {
                 return response.json()
             })
             .then((data: {count: number, rates: Array<{_id: number, pair: string, buy: number, sell: number}>}) => {
-                console.dir(data)
                 setFetchedData(data)
             })
             .catch(err => {
@@ -29,7 +28,7 @@ export const useRates = (url: string, dependencies: any) => {
     useEffect(
         () => {
             loadData()
-            fetchingInterval = setInterval(loadData, 5000);
+            fetchingInterval = setInterval(loadData, 1000);
             return () => {
                 clearInterval(fetchingInterval)
             }

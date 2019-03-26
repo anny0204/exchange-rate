@@ -26,7 +26,7 @@
     "eject": "react-scripts-ts eject",
     "nodemon": "nodemon server.js",
     "start": "concurrently \"yarn run nodemon\" \"yarn run start:client\" ",
-    "test:api": "mocha --timeout 10000"
+    "test:api": "mocha api/test/*.js --timeout 5000 --exit"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
